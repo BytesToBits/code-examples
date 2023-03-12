@@ -2,7 +2,7 @@ import { Box, Badge } from "@chakra-ui/react";
 import Link from "next/link";
 
 export default function Card({ language = "Text", fileName = "unknown" }) {
-	const link = !fileName.endsWith(" ISDIR") ? `/s/${language}/${fileName}` : `https://github.com/DevSnowflake/code-examples/tree/main/codes/${language}/${fileName.replace(" ISDIR", "")}`;
+	const link = !fileName.endsWith(" ISDIR") ? `/s/${language}/${fileName}` : `https://github.com/BytesToBits/code-examples/tree/main/codes/${language}/${fileName.replace(" ISDIR", "")}`;
 	return (
 		<>
 			<Link href={link} passHref={true}>

@@ -19,7 +19,7 @@ function SearchItem({ data }: SearchItemProps) {
 
 	let ghLink;
 
-	if (name.endsWith("ISDIR")) ghLink = `https://github.com/DevSnowflake/code-examples/tree/main/codes/${language}/${name.replace(" ISDIR", "")}`;
+	if (name.endsWith("ISDIR")) ghLink = `https://github.com/BytesToBits/code-examples/tree/main/codes/${language}/${name.replace(" ISDIR", "")}`;
 
 	return (
 		<Link href={ghLink ?? `/s/${language}/${name}`}>
