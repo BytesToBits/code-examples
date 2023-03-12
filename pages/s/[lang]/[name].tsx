@@ -21,6 +21,7 @@ export default function Snippet({ content }: SnippetProps) {
 	useEffect(() => {
 		if (typeof name === "string" && name.endsWith(" ISDIR")) {
 			window.open(`https://github.com/BytesToBits/code-examples/tree/main/codes/${lang}/${name.replace(" ISDIR", "")}`);
+			router.push("/")
 		}
 	});
 	return (
