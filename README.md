@@ -10,7 +10,7 @@ This is a contiuation of <a href="https://github.com/CesiumLabs/code-examples" t
 
 <h1 align="center"> How do I contribute? </h1>
 
-<p align="center"> You can create pull requests to this repo in any language you like. If you don't know what pull requests are <a href="https://opensource.com/article/19/7/create-pull-request-github">click here</a>
+<p align="center"> You can create pull requests to this repo in any language you like. If you don't know what pull requests are <a href="https://opensource.com/article/19/7/create-pull-request-github">click here</a>. Remember that new codes may take <strong>up to 5 minutes to appear</strong>. Be patient.
   </p>
 
  <h1 align="center">What should I do?</h1>
