@@ -1,5 +1,5 @@
 {
-  "name": "@devsnowflake/code-examples",
+  "name": "@bytestobits/code-examples",
   "version": "1.0.0",
   "description": "Random code samples",
   "private": true,
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DevSnowflake/code-examples.git"
+    "url": "git+https://github.com/BytesToBits/code-examples.git"
   },
   "author": "Snowflake Studio",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DevSnowflake/code-examples/issues"
+    "url": "https://github.com/BytesToBits/code-examples/issues"
   },
-  "homepage": "https://github.com/DevSnowflake/code-examples#readme",
+  "homepage": "https://github.com/BytesToBits/code-examples#readme",
   "dependencies": {
     "@chakra-ui/popover": "^1.10.1",
     "@chakra-ui/react": "^1.6.8",

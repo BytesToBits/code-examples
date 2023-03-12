@@ -3,12 +3,10 @@
 </p>
 <h1 align="center">Code Examples</h1>
 <p align="center">A code archieve for everyone to contribute to 💗
-  </p>
-  <p align="center">
-  <a href="https://github.com/cesiumlabs/code-examples">Github</a> |
-  <a href="https://codes.cesiumlabs.xyz">Website</a> |
-  <a href="https://cesiumlabs.xyz/discord">Discord Server</a>
-  </p>
+</p>
+<p align="center">
+This is a contiuation of <a href="https://github.com/CesiumLabs/code-examples" target="_blank">Code Examples</a> by Cesium Labs. Check them out if you wish.
+</p>
 
 <h1 align="center"> How do I contribute? </h1>
 
@@ -34,14 +32,9 @@
 
 <p align="center">It's best to use <a href="https://ccm.snowflakedev.org">conventional commit messages</a> format but is not compulsory.</p>
 
-<h1 align="center">Join our Discord</h1>
+</br>
 
-<p align="center">
-<a href="https://snowflakedev.org/discord"><img src="https://i.imgur.com/S1V71CD.png"></img></a>
-</p>
-</br>
-</br>
-<h1 align="center">We 💗 Open Source 🎉 </h1>
+<h1 align="center">💗 Our <strong>amazing</strong> contributors 💗</h1>
 
 <p align="center">
 <a href="https://github.com/cesiumlabs/code-examples/graphs/contributors">

@@ -15,7 +15,7 @@ export default function Snippet({ content }) {
 
 	useEffect(() => {
 		if (typeof name === "string" && name.endsWith(" ISDIR")) {
-			router.push(`https://github.com/DevSnowflake/code-examples/tree/main/codes/${lang}/${name.replace(" ISDIR", "")}`);
+			router.push(`https://github.com/BytesToBits/code-examples/tree/main/codes/${lang}/${name.replace(" ISDIR", "")}`);
 		}
 	});
 	return (

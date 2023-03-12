@@ -1,6 +1,6 @@
 import request from "./request";
 
-const CODE_URL = "https://api.github.com/repositories/412320515/contents/codes";
+const CODE_URL = "https://api.github.com/repositories/612775458/contents/codes";
 const contentCache = new Map<string, any>();
 
 export const getLanguages = async () => {
@@ -15,7 +15,7 @@ export const getLanguages = async () => {
 
 export const getFiles = async (language) => {
 	if (contentCache.has(`codes_${language}`)) return contentCache.get(`codes_${language}`);
-	const res = await request(`https://api.github.com/repositories/412320515/contents/codes/${encodeURIComponent(language)}`, "GET");
+	const res = await request(`https://api.github.com/repositories/612775458/contents/codes/${encodeURIComponent(language)}`, "GET");
 
 	if (!res.ok) return undefined;
 
@@ -34,7 +34,7 @@ export const getFiles = async (language) => {
 };
 
 export const getContent = async (language, fileName) => {
-	const res = await request(`https://raw.githubusercontent.com/DevSnowflake/code-examples/main/codes/${encodeURIComponent(language)}/${encodeURIComponent(fileName)}`, "GET");
+	const res = await request(`https://raw.githubusercontent.com/BytesToBits/code-examples/main/codes/${encodeURIComponent(language)}/${encodeURIComponent(fileName)}`, "GET");
 
 	if (res.status == 404) return undefined;
 

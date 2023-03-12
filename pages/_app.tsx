@@ -36,19 +36,19 @@ function MyApp({ Component, pageProps }: AppProps) {
 					crossOrigin="anonymous"
 					referrerPolicy="no-referrer"
 				/>
-				<meta property="og:url" content="https://codes.snowflakedev.org" />
-				<meta property="og:title" content="Codes | SnowflakeDev Community ❄" />
-				<meta property="og:description" content="Short code snippets written by our open source community!" />
+				<meta property="og:url" content="https://examples.bytestobits.dev" />
+				<meta property="og:title" content="Code Examples | BytesToBits" />
+				<meta property="og:description" content="Short code snippets" />
 				<meta property="og:image" content="/Logo.png" />
 
-				<meta property="url" content="https://codes.snowflakedev.org" />
-				<meta property="title" content="Codes | SnowflakeDev Community ❄" />
-				<meta name="description" content="Short code snippets written by our open source community!" />
+				<meta property="url" content="https://examples.bytestobits.dev" />
+				<meta property="title" content="Code Examples | BytesToBits" />
+				<meta name="description" content="Short code snippets" />
 				<meta property="image" content="/Logo.png" />
 
-				<meta property="twitter:url" content="https://codes.snowflakedev.org" />
-				<meta property="twitter:title" content="Codes | SnowflakeDev Community ❄" />
-				<meta property="twitter:description" content="Short code snippets written by our open source community!" />
+				<meta property="twitter:url" content="https://examples.bytestobits.dev" />
+				<meta property="twitter:title" content="Code Examples | BytesToBits" />
+				<meta property="twitter:description" content="Short code snippets" />
 				<meta property="twitter:image" content="/Logo.png" />
 			</Head>
 			{isLoading && <Image alt="loading" src="/loading.svg" boxSize="50px" position="fixed" bottom="5px" right="5px" draggable="false" />}
