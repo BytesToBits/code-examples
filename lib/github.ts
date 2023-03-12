@@ -1,9 +1,18 @@
 import request from "./request";
 
 const CODE_URL = "https://api.github.com/repositories/612775458/contents/codes";
-const contentCache = new Map<string, any>();
+const contentCache = new Map<string, any>([
+	['cx3.reset', new Date()]
+]);
 
 export const getLanguages = async () => {
+	const cx3Reset: Date = contentCache.get('cx3.reset')
+	const now = new Date()
+	if(now.getTime() - cx3Reset.getTime() >= 300) {
+		contentCache.clear()
+		contentCache.set('cx3.reset', now)
+	}
+
 	if (contentCache.has("codes")) return contentCache.get("codes") as string[];
 	const res = await request(CODE_URL, "GET");
 	const data = await res.json();
