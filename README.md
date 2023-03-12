@@ -28,16 +28,12 @@ This is a contiuation of <a href="https://github.com/CesiumLabs/code-examples" t
 -   Add cloned repositories into the code base.
 -   Any type of promotion like (discord server link, affiliated link etc). Demo websites linked in readme or comments that are related to the code are allowed.
 
-<h1 align="center">Commit Messages</h1>
-
-<p align="center">It's best to use <a href="https://ccm.snowflakedev.org">conventional commit messages</a> format but is not compulsory.</p>
-
 </br>
 
 <h1 align="center">💗 Our <strong>amazing</strong> contributors 💗</h1>
 
 <p align="center">
-<a href="https://github.com/cesiumlabs/code-examples/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=cesiumlabs/code-examples" />
+<a href="https://github.com/BytesToBits/code-examples/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=BytesToBits/code-examples" />
 </a>
   </p>

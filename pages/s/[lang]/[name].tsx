@@ -20,11 +20,11 @@ export default function Snippet({ content }: SnippetProps) {
 
 	useEffect(() => {
 		if (typeof name === "string" && name.endsWith(" ISDIR")) {
-			router.push(`https://github.com/BytesToBits/code-examples/tree/main/codes/${lang}/${name.replace(" ISDIR", "")}`);
+			window.open(`https://github.com/BytesToBits/code-examples/tree/main/codes/${lang}/${name.replace(" ISDIR", "")}`);
 		}
 	});
 	return (
-		<BaseLayout pageTitle={`${lang} / ${name}`} padding={false}>
+		<BaseLayout pageTitle={`${lang} / ${name}`} snippets={[]} padding={false}>
 			<Popover>
 				<Stack direction={"row"} spacing={4} px={2} py={3}>
 					<Button colorScheme="teal" variant="outline">

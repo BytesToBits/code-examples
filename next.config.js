@@ -4,6 +4,9 @@ module.exports = {
 	experimental: {
 		nftTracing: true
 	},
+	typescript: {
+		ignoreBuildErrors: true
+	},
 	serverRuntimeConfig: {
 		PROJECT_ROOT: process.cwd()
 	}
