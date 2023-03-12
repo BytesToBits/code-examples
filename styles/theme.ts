@@ -1,5 +1,5 @@
 import { extendTheme, ThemeConfig } from "@chakra-ui/react";
-import { createBreakpoints, mode } from "@chakra-ui/theme-tools";
+import { createBreakpoints } from "@chakra-ui/theme-tools";
 import { Lighten } from "../lib/utils";
 
 const breakpoints = createBreakpoints({
@@ -15,7 +15,7 @@ const components = {};
 
 const colors = {
 	darkBlue: "#011627",
-	lightBlue: Lighten("#011627", 10),
+	lightBlue: Lighten("#011627", .1),
 	brandGray: "#202938"
 };
 
@@ -29,7 +29,7 @@ const config: ThemeConfig = {
 };
 
 const styles = {
-	global: (props) => ({
+	global: () => ({
 		"::-webkit-scrollbar": {
 			width: "5px",
 			height: "5px"
@@ -42,7 +42,7 @@ const styles = {
 			background: "transparent"
 		},
 		body: {
-			bg: mode("#f5f9fc", "#111828")(props)
+			bg: "#111828"
 		}
 	})
 };

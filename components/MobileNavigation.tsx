@@ -1,15 +1,12 @@
 import { Avatar } from "@chakra-ui/avatar";
-import Icon from "@chakra-ui/icon";
-import { Box, Divider, Flex, HStack, Stack } from "@chakra-ui/layout";
-import { Darken } from "../lib/utils";
-import { HiViewList } from "react-icons/hi";
-import Link from "./SmartLink";
-import { useDisclosure } from "@chakra-ui/hooks";
-import { Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay } from "@chakra-ui/modal";
+import { Box, Flex } from "@chakra-ui/layout";
 import SearchBar from "./SearchBar";
 
-export default function MobileNavigation({ snippets }) {
-	const { isOpen, onOpen, onClose } = useDisclosure();
+type MobileNavigationProps = {
+	snippets: string[]
+}
+
+export default function MobileNavigation({ snippets }: MobileNavigationProps) {
 
 	return (
 		<>

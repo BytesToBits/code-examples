@@ -3,12 +3,16 @@ import { Box, Divider, Flex, HStack } from "@chakra-ui/layout";
 import SearchBar from "./SearchBar";
 import Link from "next/link";
 
-export default function Navigation({ snippets }) {
+type NavigationProps = {
+	snippets: string[]
+}
+
+export default function Navigation({ snippets }: NavigationProps) {
 	return (
 		<Flex minH="60px" p={2} bg={"brandGray"} justifyContent="space-between">
 			<Box>
 				<HStack>
-					<Link href="/">
+					<Link href="/" passHref={true}>
 						<Avatar name="Code Examples" style={{ cursor: "pointer" }} src="/Logo.png" userSelect="none" />
 					</Link>
 					<Divider orientation="vertical" height="50px" bg="silver" />

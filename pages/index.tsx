@@ -8,7 +8,11 @@ import chunk from "lodash.chunk";
 import { useState, useEffect } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-export default function Index({ snippets }) {
+type IndexProps = {
+	snippets: string[]
+}
+
+export default function Index({ snippets }: IndexProps) {
 	const [chunks, setChunks] = useState<string[][]>([]);
 	const [currentChunk, setCurrentChunk] = useState<string[]>([]);
 
@@ -19,7 +23,7 @@ export default function Index({ snippets }) {
 		);
 		setChunks(chunksData);
 		setCurrentChunk(chunksData[0]);
-	}, []);
+	}, [snippets]);
 
 	function paginate(back = false) {
 		const currentPageIndex = back ? chunks.indexOf(currentChunk) - 1 : chunks.indexOf(currentChunk) + 1;
@@ -83,15 +87,15 @@ export default function Index({ snippets }) {
 	);
 }
 
-export const getStaticProps = async () => {
+export async function getServerSideProps() {
 	const languages = await getLanguages();
 
-	const snippets = [];
+	const snippets: string[] = [];
 
 	for (let i = 0; i < languages.length; i++) {
 		let files = await getFiles(languages[i]);
 
-		files.map((file) => {
+		files?.map((file) => {
 			if (file.dir) {
 				snippets.push(`${languages[i]} / ${file.file} ISDIR`);
 			} else {

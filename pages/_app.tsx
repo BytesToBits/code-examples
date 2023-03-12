@@ -10,18 +10,19 @@ import NProgress from "nprogress";
 import "@fontsource/poppins";
 import "../styles/animatedText.css";
 import "../styles/global.css";
+import ColorModeManager from "../components/ColorModeManager";
 
 NProgress.configure({ showSpinner: false });
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const [isLoading, setLoading] = useState(false);
 
-	Router.events.on("routeChangeStart", (url) => {
+	Router.events.on("routeChangeStart", () => {
 		NProgress.start();
 		setLoading(true);
 	});
 
-	Router.events.on("routeChangeComplete", (url) => {
+	Router.events.on("routeChangeComplete", () => {
 		NProgress.done();
 		setLoading(false);
 	});
@@ -54,6 +55,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 			{isLoading && <Image alt="loading" src="/loading.svg" boxSize="50px" position="fixed" bottom="5px" right="5px" draggable="false" />}
 			<Flex flexDirection="column" minH="100vh">
 				<Component {...pageProps} />
+
+				<ColorModeManager />
 			</Flex>
 		</ChakraProvider>
 	);

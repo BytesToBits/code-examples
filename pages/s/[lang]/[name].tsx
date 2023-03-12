@@ -8,7 +8,12 @@ import { Stack } from "@chakra-ui/layout";
 import { FaCopy } from "react-icons/fa";
 import { Button, PopoverTrigger, Popover, PopoverContent, PopoverCloseButton, PopoverHeader, PopoverBody } from "@chakra-ui/react";
 import { useEffect } from "react";
-export default function Snippet({ content }) {
+
+type SnippetProps = {
+	content: string
+}
+
+export default function Snippet({ content }: SnippetProps) {
 	const router = useRouter();
 	const { lang, name } = router.query;
 	const md = `\`\`\`${lang || "text"}\n${content || "No content available!"}\n\`\`\``;

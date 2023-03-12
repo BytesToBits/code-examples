@@ -5,7 +5,7 @@ export default function Card({ language = "Text", fileName = "unknown" }) {
 	const link = !fileName.endsWith(" ISDIR") ? `/s/${language}/${fileName}` : `https://github.com/DevSnowflake/code-examples/tree/main/codes/${language}/${fileName.replace(" ISDIR", "")}`;
 	return (
 		<>
-			<Link href={link}>
+			<Link href={link} passHref={true}>
 				<Box
 					cursor={"pointer"}
 					_hover={{

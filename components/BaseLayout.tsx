@@ -4,7 +4,14 @@ import Head from "next/head";
 import MobileNavigation from "./MobileNavigation";
 import Navigation from "./Navigation";
 
-export default function BaseLayout({ pageTitle, snippets, children, padding = true }) {
+type BaseLayoutProps = {
+	pageTitle?: string
+	snippets: string[]
+	children?: any
+	padding?: boolean
+}
+
+export default function BaseLayout({ pageTitle, snippets, children, padding = true }: BaseLayoutProps) {
 	const isMobile = useBreakpointValue({
 		base: true,
 		md: false

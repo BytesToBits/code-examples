@@ -1,4 +1,4 @@
-const request = async (url, method) => {
+const request = async (url: string, method: string) => {
 	const res = await fetch(url, {
 		method,
 		headers: {

@@ -13,15 +13,37 @@ export const getLanguages = async () => {
 	return newData;
 };
 
-export const getFiles = async (language) => {
+type FileResponse = {
+	name: string
+	path: string
+	sha: string
+	size: number
+	url: string
+	html_url: string
+	git_url: string
+	download_url: string
+	type: string
+	_links: {
+		self: string
+		git: string
+		html: string
+	}
+}
+
+type CodeFile = {
+	file: string
+	dir: boolean
+}
+
+export async function getFiles(language: string): Promise<undefined | CodeFile[]> {
 	if (contentCache.has(`codes_${language}`)) return contentCache.get(`codes_${language}`);
 	const res = await request(`https://api.github.com/repositories/612775458/contents/codes/${encodeURIComponent(language)}`, "GET");
 
 	if (!res.ok) return undefined;
 
-	const data = await res.json();
+	const data: FileResponse[] = await res.json();
 
-	const newData = data.map((obj) => {
+	const newData: CodeFile[] = data.map((obj) => {
 		return {
 			file: obj.name,
 			dir: obj.type !== "file"
@@ -33,7 +55,7 @@ export const getFiles = async (language) => {
 	return newData;
 };
 
-export const getContent = async (language, fileName) => {
+export const getContent = async (language: string, fileName: string) => {
 	const res = await request(`https://raw.githubusercontent.com/BytesToBits/code-examples/main/codes/${encodeURIComponent(language)}/${encodeURIComponent(fileName)}`, "GET");
 
 	if (res.status == 404) return undefined;

@@ -8,8 +8,13 @@ import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import searchEngine from "../lib/search";
 import { Darken } from "../lib/utils";
+import theme from "../styles/theme";
 
-const SearchItem = ({ data }) => {
+type SearchItemProps = {
+	data: string
+}
+
+function SearchItem({ data }: SearchItemProps) {
 	const [language, name] = data.split(" / ");
 
 	let ghLink;
@@ -18,29 +23,20 @@ const SearchItem = ({ data }) => {
 
 	return (
 		<Link href={ghLink ?? `/s/${language}/${name}`}>
-			<Box p={2} border="1px solid aqua" rounded="md" bg={Darken("brandGray", 1)} my={2}>
+			<Box p={2} border="1px solid aqua" rounded="md" bg={Darken("brandGray", 1)(theme)} my={2}>
 				<Text>{data.replace(" ISDIR", "")}</Text>
 			</Box>
 		</Link>
 	);
 };
 
-export default function SearchBar({ snippets }) {
-	const [options, setOptions] = useState([]);
+type SearchBarProps = {
+	snippets: string[]
+}
+
+export default function SearchBar({ snippets }: SearchBarProps) {
+	const [options, setOptions] = useState<any[]>([]);
 	const router = useRouter();
-
-	// onChange={async(e) => {
-	//     const res = await fetch("/api/search", {
-	//         method: "POST",
-	//         body: JSON.stringify({
-	//             query: e.target.value
-	//         })
-	//     })
-
-	//     const data = await res.json()
-
-	//     setOptions(data.response)
-	// }}
 
 	return (
 		<>
